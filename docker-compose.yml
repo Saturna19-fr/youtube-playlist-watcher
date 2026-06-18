@@ -1,0 +1,9 @@
+services:
+  playlist-watcher:
+    build: .
+    container_name: playlist-watcher
+    restart: unless-stopped
+    environment:
+      - TA_TOKEN=${TA_TOKEN}
+    volumes:
+      - ./data:/app/data
